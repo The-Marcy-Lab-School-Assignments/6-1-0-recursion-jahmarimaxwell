@@ -77,10 +77,9 @@ const binarySearch = (arr, target, start = 0, end = arr.length - 1) => {
     }
 
     // If the target is less than the mid element, search the left half
-    if (target < arr[mid]) {
-        return binarySearch(arr, target, start, mid - 1);
+    if (arr[mid] > target) {
+     return binarySearch(arr, target, start, mid - 1);
     }
-
     // If the target is greater than the mid element, search the right half
     return binarySearch(arr, target, mid + 1, end);
 };
